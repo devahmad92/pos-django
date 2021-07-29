@@ -70,12 +70,12 @@ Then navigate to http://127.0.0.1:8000/
   - failed: will try 5 times then will mark the event as failed
 - in case the integrator have an update regarding the order it will send a request to our **callback** lambda function.
 
-####note
+#### note
 we have 2 type of lambda functions:
   - main: to send requests to external integrator
   - callback: to receive update form external integrator and notify the client
  
-##APIs URL
+## APIs URL
   - GET/POST http://127.0.0.1:8000/api/v1/orders
   - PATCH/DELETE/GET http://127.0.0.1:8000/api/v1/orders/1
  
