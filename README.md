@@ -1,6 +1,18 @@
 ## Requirements
 - Python (3.9.5)
 - Django (3.12.4)
+## Installation
+- clone this repository
+- run the migration using this command:
+```shell
+python manage.py migrate
+```
+note: for tutorial reasons I used Sqlite :)
+- start the server using this command:
+```shell
+python manage.py runserver
+```
+Then navigate to http://127.0.0.1:8000/
 ## High Level Architecture
 ![](documentation/high-level.png)
 - The frontend (IOS, Android, or Web) send a request to our web service URL
