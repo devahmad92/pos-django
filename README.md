@@ -17,5 +17,45 @@
   - Receive the response from the external integrator.
   - Save it to the DB
   - Send push notification to the frontend to notify the client.
+## Lambda External integrator Communications
+  - Lambda will establish the authentication to each integrator.
+  - when a request is sent to any integrator it will be like this for ex:
+```json
+{
+  "user": {
+    "id": "",
+    "phone": "",
+    "name": "",
+    "email": "",
+    "lat": "",
+    "lng": ""
+  },
+  "seller": {
+    "id": "",
+    "phone": "",
+    "name": "",
+    "email": "",
+    "lat": "",
+    "lng": ""
+  },
+  "order": {
+    "id": "",
+    "datetime": "",
+    "timezone": "",
+    "user_note": "",
+    "items": [
+      {
+        "id": "",
+        "name": "",
+        "quantity": ""
+      }
+    ]
+  }
+}
+```
+- after lambda sent the request we will have 2 scenarios:
+  - success: will save the response and notify the user
+  - failed: will try 5 times then will mark the event as failed
+- in case the integrator have an update regarding the order it will send a request to our **callback** lambda function.
 ## License
 MIT
