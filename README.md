@@ -1,13 +1,6 @@
 ## Requirements
 - Python (3.9.5)
 - Django (3.12.4)
-- Mysql (8.0.25)
-## Installation
-add here the installation steps
-- 
-- 
-- 
--
 ## High Level Architecture
 ![](documentation/high-level.png)
 - The frontend (IOS, Android, or Web) send a request to our web service URL
