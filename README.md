@@ -9,7 +9,7 @@ add here the installation steps
 - 
 -
 ## High Level Architecture
-![](Docs/high-level.png)
+![](documentation/high-level.png)
 - The frontend (IOS, Android, or Web) send a request to our web service URL
 - Ex: api.posrocket.com/api/v1/orders
 - The API Gateway receives this request and forwards the request internally to our orders main API
