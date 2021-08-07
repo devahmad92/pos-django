@@ -29,3 +29,14 @@ class Order(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+
+class OrderStatus(models.Model):
+    order = models.OneToOneField(Order, related_name="order_statuses", on_delete=models.CASCADE)
+    delivery = models.BooleanField(default=False)
+    loyalty = models.BooleanField(default=False)
+    food_ordering = models.BooleanField(default=False)
+
+
+    def __str__(self):
+        return str(self.order.order_id)
